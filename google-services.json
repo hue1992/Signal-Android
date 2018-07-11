@@ -1,0 +1,73 @@
+{
+  "project_info": {
+    "project_number": "490788795261",
+    "firebase_url": "https://signal-im.firebaseio.com",
+    "project_id": "signal-im",
+    "storage_bucket": "signal-im.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:490788795261:android:04c588bb9a220405",
+        "android_client_info": {
+          "package_name": "com.born2go.signal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "490788795261-3chu52b27rjhv2i3vdlp92c2e1lo85rs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBPbVkEr66KPfU7mz8d5EZPLFRTuMmSxuU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:490788795261:android:e1aaa460b77bfdab",
+        "android_client_info": {
+          "package_name": "com.itpro.signal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "490788795261-3chu52b27rjhv2i3vdlp92c2e1lo85rs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBPbVkEr66KPfU7mz8d5EZPLFRTuMmSxuU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

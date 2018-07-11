@@ -1,4 +1,4 @@
-package org.thoughtcrime.securesms.database;
+package com.born2go.signal.database;
 
 import android.content.Context;
 import android.database.Cursor;

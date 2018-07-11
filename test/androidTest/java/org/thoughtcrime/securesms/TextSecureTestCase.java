@@ -1,4 +1,4 @@
-package org.thoughtcrime.securesms;
+package com.born2go.signal;
 
 import android.content.Context;
 import android.test.InstrumentationTestCase;

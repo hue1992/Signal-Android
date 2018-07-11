@@ -1,4 +1,4 @@
-package org.thoughtcrime.securesms.util;
+package com.born2go.signal.util;
 
 
 import org.junit.Before;

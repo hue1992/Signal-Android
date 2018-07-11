@@ -1,7 +1,7 @@
-package org.thoughtcrime.securesms.util;
+package com.born2go.signal.util;
 
 import org.junit.Test;
-import org.thoughtcrime.securesms.BaseUnitTest;
+import com.born2go.signal.BaseUnitTest;
 
 import java.util.LinkedList;
 import java.util.List;
