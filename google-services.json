@@ -15,36 +15,21 @@
       },
       "oauth_client": [
         {
-          "client_id": "490788795261-3chu52b27rjhv2i3vdlp92c2e1lo85rs.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
+          "client_id": "490788795261-uv9ree56l191932uq1bn0dl96q2ddh2a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.born2go.signal",
+            "certificate_hash": "33c24fec4aec4c5871f4a304f426a4d150f8666b"
+          }
+        },
         {
-          "current_key": "AIzaSyBPbVkEr66KPfU7mz8d5EZPLFRTuMmSxuU"
-        }
-      ],
-      "services": {
-        "analytics_service": {
-          "status": 1
+          "client_id": "490788795261-2sb3j1c4cbm62u1rnss80bmm39j64k1k.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.born2go.signal",
+            "certificate_hash": "400647aebe7d26f38366e62a8bcd1c8566a58fde"
+          }
         },
-        "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
-        },
-        "ads_service": {
-          "status": 2
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:490788795261:android:e1aaa460b77bfdab",
-        "android_client_info": {
-          "package_name": "com.itpro.signal"
-        }
-      },
-      "oauth_client": [
         {
           "client_id": "490788795261-3chu52b27rjhv2i3vdlp92c2e1lo85rs.apps.googleusercontent.com",
           "client_type": 3
@@ -60,8 +45,20 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "490788795261-3chu52b27rjhv2i3vdlp92c2e1lo85rs.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "490788795261-162jmjrelf9udqn7giip9vm3u7duoc9s.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.born2go.signal"
+              }
+            }
+          ]
         },
         "ads_service": {
           "status": 2
