@@ -553,13 +553,13 @@
         <service android:name=".service.GenericForegroundService" />
 
         <!--<receiver-->
-            <!--android:name="com.google.android.gms.gcm.GcmReceiver"-->
-            <!--android:exported="true"-->
-            <!--android:permission="com.google.android.c2dm.permission.SEND" >-->
-            <!--<intent-filter>-->
-                <!--<action android:name="com.google.android.c2dm.intent.RECEIVE" />-->
-                <!--<category android:name="com.born2go.signal" />-->
-            <!--</intent-filter>-->
+        <!--android:name="com.google.android.gms.gcm.GcmReceiver"-->
+        <!--android:exported="true"-->
+        <!--android:permission="com.google.android.c2dm.permission.SEND" >-->
+        <!--<intent-filter>-->
+        <!--<action android:name="com.google.android.c2dm.intent.RECEIVE" />-->
+        <!--<category android:name="com.born2go.signal" />-->
+        <!--</intent-filter>-->
         <!--</receiver>-->
         <receiver
             android:name=".gcm.GcmBroadcastReceiver"
@@ -569,9 +569,10 @@
                 <category android:name="com.born2go.signal" />
             </intent-filter>
         </receiver>
+
         <service
             android:name=".gcm.MyGcmListenerService"
-            android:exported="false" >
+            android:exported="false">
             <intent-filter>
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
             </intent-filter>
@@ -585,8 +586,7 @@
         </service>
         <service
             android:name="gcm.RegistrationIntentService"
-            android:exported="false">
-        </service>
+            android:exported="false"></service>
 
 
         <receiver
@@ -748,6 +748,7 @@
                 <action android:name="info.guardianproject.panic.action.TRIGGER" />
             </intent-filter>
         </receiver>
+
         <uses-library
             android:name="com.sec.android.app.multiwindow"
             android:required="false" />
@@ -768,5 +769,15 @@
             android:name="com.sec.android.multiwindow.MINIMUM_SIZE_H"
             android:value="598.0dip" />
 
+        <!-- [START firebase_service] -->
+        <service android:name=".fcm.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <!-- [END firebase_service] -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/default_notification_channel_id" />
     </application>
 </manifest>
