@@ -38,6 +38,7 @@ public class VerificationCodeView extends FrameLayout {
 
   private OnCodeEnteredListener listener;
   private int index = 0;
+  private String vericationId;
 
   public VerificationCodeView(Context context) {
     super(context);
@@ -138,7 +139,7 @@ public class VerificationCodeView extends FrameLayout {
     codeView.startAnimation(animationSet);
 
     if (index == codes.size() && listener != null) {
-      listener.onCodeComplete(Stream.of(codes).map(TextView::getText).collect(Collectors.joining()));
+      listener.onCodeComplete(Stream.of(codes).map(TextView::getText).collect(Collectors.joining()),vericationId);
     }
   }
 
@@ -156,7 +157,11 @@ public class VerificationCodeView extends FrameLayout {
     }
   }
 
+  public void setVericationId(String vericationId) {
+    this.vericationId=vericationId;
+  }
+
   public interface OnCodeEnteredListener {
-    void onCodeComplete(@NonNull String code);
+    void onCodeComplete(@NonNull String code,String verificationId);
   }
 }

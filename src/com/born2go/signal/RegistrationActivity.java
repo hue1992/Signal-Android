@@ -707,60 +707,13 @@ public class RegistrationActivity extends BaseActionBarActivity implements Verif
         }
     }
 
-    @SuppressLint("StaticFieldLeak")
     @Override
     public void onCodeComplete(@NonNull String code, String verificationId) {
         this.registrationState = new RegistrationState(RegistrationState.State.CHECKING, this.registrationState);
         callMeCountDownView.setVisibility(View.INVISIBLE);
         keyboard.displayProgress();
         PhoneAuthCredential credential = PhoneAuthProvider.getCredential(verificationId, code);
-        // [END verify_with_code]
         signInWithPhoneAuthCredential(credential);
-//        new AsyncTask<Void, Void, Pair<Integer, Long>>() {
-//            @Override
-//            protected Pair<Integer, Long> doInBackground(Void... voids) {
-//                try {
-//                    verifyAccount(code, null);
-//                    return new Pair<>(1, -1L);
-//                } catch (LockedException e) {
-//                    Log.w(TAG, e);
-//                    return new Pair<>(2, e.getTimeRemaining());
-//                } catch (IOException e) {
-//                    Log.w(TAG, e);
-//                    return new Pair<>(3, -1L);
-//                }
-//            }
-//
-//            @Override
-//            protected void onPostExecute(Pair<Integer, Long> result) {
-//                if (result.first == 1) {
-//                    keyboard.displaySuccess().addListener(new AssertedSuccessListener<Boolean>() {
-//                        @Override
-//                        public void onSuccess(Boolean result) {
-//                            handleSuccessfulRegistration();
-//                        }
-//                    });
-//                } else if (result.first == 2) {
-//                    keyboard.displayLocked().addListener(new AssertedSuccessListener<Boolean>() {
-//                        @Override
-//                        public void onSuccess(Boolean r) {
-//                            registrationState = new RegistrationState(RegistrationState.State.PIN, registrationState);
-//                            displayPinView(code, result.second);
-//                        }
-//                    });
-//                } else {
-//                    keyboard.displayFailure().addListener(new AssertedSuccessListener<Boolean>() {
-//                        @Override
-//                        public void onSuccess(Boolean result) {
-//                            registrationState = new RegistrationState(RegistrationState.State.VERIFYING, registrationState);
-//                            callMeCountDownView.setVisibility(View.VISIBLE);
-//                            verificationCodeView.clear();
-//                            keyboard.displayKeyboard();
-//                        }
-//                    });
-//                }
-//            }
-//        }.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
     }
 
     @SuppressLint("StaticFieldLeak")
@@ -1393,6 +1346,7 @@ public class RegistrationActivity extends BaseActionBarActivity implements Verif
         else
             restoreBackupProgress.setText(getString(R.string.RegistrationActivity_d_messages_so_far, event.getCount()));
     }
+
 
     private class ChallengeReceiver extends BroadcastReceiver {
         @Override
