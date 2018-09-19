@@ -893,7 +893,11 @@ public class RegistrationActivity extends BaseActionBarActivity implements Verif
                             keyboard.displaySuccess().addListener(new AssertedSuccessListener<Boolean>() {
                                 @Override
                                 public void onSuccess(Boolean result) {
+
                                     handleSuccessfulRegistration();
+                                    setFcmId();
+
+
                                 }
                             });
 
@@ -907,6 +911,17 @@ public class RegistrationActivity extends BaseActionBarActivity implements Verif
         });
 
 
+    }
+
+    private void setFcmId() {
+        String fcmId = getSharedPreferences("_Lalo_", MODE_PRIVATE).getString("fcmId", "");
+        org.whispersystems.libsignal.util.guava.Optional<String> optional_fcm = org.whispersystems.libsignal.util.guava.Optional.of(fcmId);
+        try {
+            accountManager.setGcmId(optional_fcm);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     private void setPrefData(String signalingKey) {
