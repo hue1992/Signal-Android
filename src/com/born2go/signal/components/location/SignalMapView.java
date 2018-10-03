@@ -45,11 +45,11 @@ public class SignalMapView extends LinearLayout {
 
   private void initialize(Context context) {
     setOrientation(LinearLayout.VERTICAL);
-    LayoutInflater.from(context).inflate(R.layout.signal_map_view, this, true);
-
-    this.mapView   = ViewUtil.findById(this, R.id.map_view);
-    this.imageView = ViewUtil.findById(this, R.id.image_view);
-    this.textView  = ViewUtil.findById(this, R.id.address_view);
+//    LayoutInflater.from(context).inflate(R.layout.signal_map_view, this, true);
+//
+//    this.mapView   = ViewUtil.findById(this, R.id.map_view);
+//    this.imageView = ViewUtil.findById(this, R.id.image_view);
+//    this.textView  = ViewUtil.findById(this, R.id.address_view);
   }
 
   public ListenableFuture<Bitmap> display(final SignalPlace place) {
