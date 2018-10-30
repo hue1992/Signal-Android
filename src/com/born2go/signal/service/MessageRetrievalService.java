@@ -67,7 +67,7 @@ public class MessageRetrievalService extends Service implements InjectableType, 
     retrievalThread = new MessageRetrievalThread();
     retrievalThread.start();
 
-    setForegroundIfNecessary();
+   // setForegroundIfNecessary();
   }
 
   public int onStartCommand(Intent intent, int flags, int startId) {
